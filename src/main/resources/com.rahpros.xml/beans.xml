@@ -6,4 +6,10 @@
     <bean id="mundo" class="com.rahpors.beans.Mundo">
         <property name="saludo" value="Hola Mundo!"></property>
     </bean>
+
+    <bean id="persona" class="com.rahpors.beans.Persona">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="Ramon"></constructor-arg>
+        <constructor-arg value="Jamon"></constructor-arg>
+    </bean>
 </beans>
