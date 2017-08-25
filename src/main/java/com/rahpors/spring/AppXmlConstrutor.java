@@ -17,6 +17,8 @@ public class AppXmlConstrutor {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com.rahpros.xml/beans.xml");
         Persona m = (Persona) applicationContext.getBean("persona");
         System.out.println(m.toString());
+        m = (Persona) applicationContext.getBean("personaOne");
+        System.out.println(m.toString());
         ((ConfigurableApplicationContext)applicationContext).close();
     }
 
