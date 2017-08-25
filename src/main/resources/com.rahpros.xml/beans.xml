@@ -10,7 +10,7 @@
     <bean id="persona" class="com.rahpors.beans.Persona">
         <constructor-arg value="1"></constructor-arg>
         <constructor-arg value="Ramon"></constructor-arg>
-        <constructor-arg value="Jamon"></constructor-arg>
+        <constructor-arg value="Jamonq"></constructor-arg>
     </bean>
 
     <bean id="personaOne" class="com.rahpors.beans.Persona">
