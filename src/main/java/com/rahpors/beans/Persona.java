@@ -14,6 +14,11 @@ public class Persona {
         this.apodo = apodo;
     }
 
+    public Persona(int id) {
+        this.id = id;
+    }
+
+
     public int getId() {
         return id;
     }
