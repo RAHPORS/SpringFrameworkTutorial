@@ -18,6 +18,10 @@ public class Persona {
         this.id = id;
     }
 
+    public Persona(String apodo) {
+        this.apodo = apodo;
+    }
+
 
     public int getId() {
         return id;
