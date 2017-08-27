@@ -3,18 +3,34 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="mundo" class="com.rahpors.beans.Mundo">
-        <property name="saludo" value="Hola Mundo!"></property>
+    <!--<bean id="mundo" class="com.rahpors.beans.Mundo">-->
+        <!--<property name="saludo" value="Hola Mundo!"></property>-->
+    <!--</bean>-->
+
+    <!--<bean id="persona" class="com.rahpors.beans.Persona">-->
+        <!--<constructor-arg index="0" value="1"></constructor-arg>-->
+        <!--<constructor-arg index="2" value="Ramon"></constructor-arg>-->
+        <!--<constructor-arg index="1" value="Jamonq"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="personaOne" class="com.rahpors.beans.Persona">-->
+        <!--<constructor-arg type="String" value="1"></constructor-arg>-->
+    <!--</bean>-->
+
+    <bean id="personaPais" class="com.rahpors.beans.Persona">
+        <property name="pais" ref="paisa"></property>
+        <property name="ciudad" ref="ciudad"></property>
+        <property name="id" value="1"></property>
+        <property name="apodo" value="Jamon"></property>
+        <property name="nombre" value="Ramon"></property>
     </bean>
 
-    <bean id="persona" class="com.rahpors.beans.Persona">
-        <constructor-arg index="0" value="1"></constructor-arg>
-        <constructor-arg index="2" value="Ramon"></constructor-arg>
-        <constructor-arg index="1" value="Jamonq"></constructor-arg>
+    <bean id="paisa" class="com.rahpors.beans.Pais">
+        <property name="name" value="mexico"></property>
     </bean>
 
-    <bean id="personaOne" class="com.rahpors.beans.Persona">
-        <constructor-arg type="String" value="1"></constructor-arg>
+    <bean id="ciudad" class="com.rahpors.beans.Ciudad">
+        <property name="nombre" value="GDL"></property>
     </bean>
 
 </beans>
