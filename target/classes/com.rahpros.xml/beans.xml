@@ -17,7 +17,8 @@
         <!--<constructor-arg type="String" value="1"></constructor-arg>-->
     <!--</bean>-->
 
-    <bean id="personaPais" class="com.rahpors.beans.Persona" init-method="init" destroy-method="destroy">
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>
+    <bean id="personaPais" class="com.rahpors.beans.Persona" >
         <property name="pais">
             <bean id="paisa" class="com.rahpors.beans.Pais">
                 <property name="name" value="mexico"></property>
