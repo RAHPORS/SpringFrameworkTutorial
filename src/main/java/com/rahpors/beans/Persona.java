@@ -24,6 +24,12 @@ public class Persona {
 //        this.apodo = apodo;
 //    }
 
+    private void init(){
+        System.out.println("Antes");
+    }
+    private void destroy(){
+        System.out.println("despues");
+    }
     public int getId() {
         return id;
     }
