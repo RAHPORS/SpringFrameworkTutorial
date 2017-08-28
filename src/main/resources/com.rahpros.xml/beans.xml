@@ -22,9 +22,11 @@
             <bean id="paisa" class="com.rahpors.beans.Pais">
                 <property name="name" value="mexico"></property>
                 <property name="ciudad" >
-                    <bean id="ciudad" class="com.rahpors.beans.Ciudad">
-                        <property name="nombre" value="GDL"></property>
-                    </bean>
+                    <list>
+                        <ref bean="ciudad"></ref>
+                        <ref bean="ciudad1"></ref>
+                        <ref bean="ciudad2"></ref>
+                    </list>
                 </property>
             </bean>
         </property>
@@ -33,6 +35,18 @@
         <property name="apodo" value="Jamon"></property>
         <property name="nombre" value="Ramon"></property>
     </bean>
+
+    <bean id="ciudad" class="com.rahpors.beans.Ciudad">
+        <property name="nombre" value="GDL"></property>
+    </bean>
+    <bean id="ciudad1" class="com.rahpors.beans.Ciudad">
+        <property name="nombre" value="MTY"></property>
+    </bean>
+    <bean id="ciudad2" class="com.rahpors.beans.Ciudad">
+        <property name="nombre" value="MX"></property>
+    </bean>
+
+    <alias name="personaPais" alias="personaConPais"/>
 
 
 

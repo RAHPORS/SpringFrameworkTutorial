@@ -1,24 +1,15 @@
 package com.rahpors.beans;
 
+import java.util.List;
+
 public class Pais {
     private String name;
-    private Ciudad ciudad;
 
-    @Override
-    public String toString() {
-        return "Pais{" +
-                "name='" + name + '\'' +
-                ", ciudad=" + ciudad +
-                '}';
-    }
-
-    public Ciudad getCiudad() {
-        return ciudad;
-    }
-
-    public void setCiudad(Ciudad ciudad) {
+    public void setCiudad(List<Ciudad> ciudad) {
         this.ciudad = ciudad;
     }
+
+    private List<Ciudad> ciudad;
 
     public String getName() {
         return name;
@@ -28,4 +19,11 @@ public class Pais {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Pais{" +
+                "name='" + name + '\'' +
+                ", ciudades=" + ciudad +
+                '}';
+    }
 }
