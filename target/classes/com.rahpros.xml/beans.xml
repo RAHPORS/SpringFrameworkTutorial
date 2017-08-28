@@ -18,19 +18,24 @@
     <!--</bean>-->
 
     <bean id="personaPais" class="com.rahpors.beans.Persona">
-        <property name="pais" ref="paisa"></property>
-        <property name="ciudad" ref="ciudad"></property>
+        <property name="pais">
+            <bean id="paisa" class="com.rahpors.beans.Pais">
+                <property name="name" value="mexico"></property>
+                <property name="ciudad" >
+                    <bean id="ciudad" class="com.rahpors.beans.Ciudad">
+                        <property name="nombre" value="GDL"></property>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+
         <property name="id" value="1"></property>
         <property name="apodo" value="Jamon"></property>
         <property name="nombre" value="Ramon"></property>
     </bean>
 
-    <bean id="paisa" class="com.rahpors.beans.Pais">
-        <property name="name" value="mexico"></property>
-    </bean>
 
-    <bean id="ciudad" class="com.rahpors.beans.Ciudad">
-        <property name="nombre" value="GDL"></property>
-    </bean>
+
+
 
 </beans>

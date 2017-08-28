@@ -8,7 +8,6 @@ public class Persona {
     private String nombre;
     private String apodo;
     private Pais pais;
-    private Ciudad ciudad;
 
 
 //    public Persona(int id, String nombre, String apodo) {
@@ -57,13 +56,6 @@ public class Persona {
         this.pais = pais;
     }
 
-    public Ciudad getCiudad() {
-        return ciudad;
-    }
-
-    public void setCiudad(Ciudad ciudad) {
-        this.ciudad = ciudad;
-    }
 
     @Override
     public String toString() {
@@ -72,7 +64,6 @@ public class Persona {
                 ", nombre='" + nombre + '\'' +
                 ", apodo='" + apodo + '\'' +
                 ", pais=" + pais.toString() +
-                ", ciudad=" + ciudad.toString() +
                 '}';
     }
 }
