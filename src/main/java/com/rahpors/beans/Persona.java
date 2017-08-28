@@ -1,9 +1,15 @@
 package com.rahpors.beans;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 /**
  * Created by ramon on 25/08/17.
  */
-public class Persona {
+public class Persona{ // implements InitializingBean,DisposableBean{
     private int id;
     private String nombre;
     private String apodo;
@@ -24,9 +30,11 @@ public class Persona {
 //        this.apodo = apodo;
 //    }
 
+    @PostConstruct
     private void init(){
         System.out.println("Antes");
     }
+    @PreDestroy
     private void destroy(){
         System.out.println("despues");
     }
@@ -72,4 +80,12 @@ public class Persona {
                 ", pais=" + pais.toString() +
                 '}';
     }
+
+//    public void afterPropertiesSet() throws Exception {
+//        System.out.println("Antes");
+//    }
+//
+//    public void destroy() throws Exception {
+//        System.out.println("Despues");
+//    }
 }
