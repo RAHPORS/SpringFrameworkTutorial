@@ -18,6 +18,7 @@
     <!--</bean>-->
 
     <!--<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>-->
+    <bean class="com.rahpors.beans.RahporsBeanPostProcessor"></bean>
     <bean id="personaPais" class="com.rahpors.beans.Persona" >
         <property name="pais">
             <bean id="paisa" class="com.rahpors.beans.Pais">
