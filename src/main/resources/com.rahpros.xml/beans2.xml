@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="Messi" class="com.rahpors.beans.Jugador">
+       <property name="nombre" value="10"></property>
+       <property name="numero" value="10"></property>
+       <property name="equipo" ref="equipo"></property>
+   </bean>
+    <bean id="equipo" class="com.rahpors.beans.Barsa"></bean>
+    <bean id="equipo1" class="com.rahpors.beans.Juve"></bean>
+
+
+
+</beans>
